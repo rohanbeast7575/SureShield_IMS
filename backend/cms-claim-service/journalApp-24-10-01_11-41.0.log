@@ -1,0 +1,29 @@
+24-10-01 11:41:29.462 [http-nio-8083-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+24-10-01 11:41:29.469 [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+24-10-01 11:41:29.474 [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms 
+24-10-01 11:41:29.843 [http-nio-8083-exec-1] ERROR c.c.c.e.GlobalExceptionHandler - Claim Not found No Claims found!!!  
+24-10-01 11:41:29.870 [http-nio-8083-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.cms.claim.exception.ClaimNotFoundException: No Claims found!!!] 
+24-10-01 11:41:39.639 [http-nio-8083-exec-2] ERROR c.c.c.e.GlobalExceptionHandler - Claim Not found No Claims found!!!  
+24-10-01 11:41:39.642 [http-nio-8083-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.cms.claim.exception.ClaimNotFoundException: No Claims found!!!] 
+24-10-01 11:41:40.539 [http-nio-8083-exec-3] ERROR c.c.c.e.GlobalExceptionHandler - Claim Not found No Claims found!!!  
+24-10-01 11:41:40.541 [http-nio-8083-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.cms.claim.exception.ClaimNotFoundException: No Claims found!!!] 
+24-10-01 11:41:42.032 [http-nio-8083-exec-4] ERROR c.c.c.e.GlobalExceptionHandler - Claim Not found No Claims found!!!  
+24-10-01 11:41:42.035 [http-nio-8083-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.cms.claim.exception.ClaimNotFoundException: No Claims found!!!] 
+24-10-01 11:41:42.837 [http-nio-8083-exec-5] ERROR c.c.c.e.GlobalExceptionHandler - Claim Not found No Claims found!!!  
+24-10-01 11:41:42.839 [http-nio-8083-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.cms.claim.exception.ClaimNotFoundException: No Claims found!!!] 
+24-10-01 11:41:43.479 [http-nio-8083-exec-6] ERROR c.c.c.e.GlobalExceptionHandler - Claim Not found No Claims found!!!  
+24-10-01 11:41:43.482 [http-nio-8083-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.cms.claim.exception.ClaimNotFoundException: No Claims found!!!] 
+24-10-01 11:41:49.395 [http-nio-8083-exec-7] ERROR c.c.c.e.GlobalExceptionHandler - Claim Not found No Claims found!!!  
+24-10-01 11:41:49.398 [http-nio-8083-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.cms.claim.exception.ClaimNotFoundException: No Claims found!!!] 
+24-10-01 11:41:50.033 [http-nio-8083-exec-8] ERROR c.c.c.e.GlobalExceptionHandler - Claim Not found No Claims found!!!  
+24-10-01 11:41:50.036 [http-nio-8083-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.cms.claim.exception.ClaimNotFoundException: No Claims found!!!] 
+24-10-01 11:41:50.493 [http-nio-8083-exec-9] ERROR c.c.c.e.GlobalExceptionHandler - Claim Not found No Claims found!!!  
+24-10-01 11:41:50.498 [http-nio-8083-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.cms.claim.exception.ClaimNotFoundException: No Claims found!!!] 
+24-10-01 11:41:51.023 [http-nio-8083-exec-10] ERROR c.c.c.e.GlobalExceptionHandler - Claim Not found No Claims found!!!  
+24-10-01 11:41:51.027 [http-nio-8083-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.cms.claim.exception.ClaimNotFoundException: No Claims found!!!] 
+24-10-01 11:41:51.241 [http-nio-8083-exec-1] ERROR c.c.c.e.GlobalExceptionHandler - Claim Not found No Claims found!!!  
+24-10-01 11:41:51.244 [http-nio-8083-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.cms.claim.exception.ClaimNotFoundException: No Claims found!!!] 
+24-10-01 11:41:51.598 [http-nio-8083-exec-2] ERROR c.c.c.e.GlobalExceptionHandler - Claim Not found No Claims found!!!  
+24-10-01 11:41:51.601 [http-nio-8083-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.cms.claim.exception.ClaimNotFoundException: No Claims found!!!] 
+24-10-01 11:41:53.035 [http-nio-8083-exec-3] ERROR c.c.c.e.GlobalExceptionHandler - Claim Not found No Claims found!!!  
+24-10-01 11:41:53.039 [http-nio-8083-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.cms.claim.exception.ClaimNotFoundException: No Claims found!!!] 

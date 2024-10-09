@@ -1,0 +1,4 @@
+24-10-01 11:42:16.901 [http-nio-8083-exec-4] ERROR c.c.c.e.GlobalExceptionHandler - Claim Not found No Claims found!!!  
+24-10-01 11:42:16.906 [http-nio-8083-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.cms.claim.exception.ClaimNotFoundException: No Claims found!!!] 
+24-10-01 11:42:24.955 [http-nio-8083-exec-5] ERROR c.c.c.e.GlobalExceptionHandler - Claim Not found No Claims found!!!  
+24-10-01 11:42:24.957 [http-nio-8083-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.cms.claim.exception.ClaimNotFoundException: No Claims found!!!] 
