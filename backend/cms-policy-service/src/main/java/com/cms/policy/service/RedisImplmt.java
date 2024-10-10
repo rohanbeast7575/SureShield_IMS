@@ -1,5 +1,6 @@
 package com.cms.policy.service;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -26,7 +27,7 @@ public class RedisImplmt {
 
 	private final ObjectMapper objectMapper = new ObjectMapper(); 
 	
-	public void setPolicies(String key_policies, Object obj, Long ttl) {
+	public void setPolicies(String key_policies, Object obj, int ttl) {
 		//ObjectMapper objectMapper = new ObjectMapper();
 		try {
 			 String jsonString = objectMapper.writeValueAsString(obj); 
@@ -48,7 +49,7 @@ public class RedisImplmt {
                 return objectMapper.readValue(jsonString,
                         objectMapper.getTypeFactory().constructCollectionType(List.class, entityClass));
             } else {
-                return null; // Return an empty list if the key is not found or data is not in the correct format
+                 return new ArrayList<>(); // Return an empty list if the key is not found or data is not in the correct format
             }
         } catch (Exception e) {
             log.error("Exception while getting list from Redis for key: " + keyPolicies, e);

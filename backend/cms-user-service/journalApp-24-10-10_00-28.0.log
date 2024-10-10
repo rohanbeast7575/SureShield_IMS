@@ -1,0 +1,11 @@
+24-10-10 00:28:42.292 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration 
+24-10-10 00:28:54.095 [RMI TCP Connection(248)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+24-10-10 00:28:54.099 [RMI TCP Connection(248)-127.0.0.1] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application CMS-USER-SERVICE with eureka with status DOWN 
+24-10-10 00:28:54.099 [RMI TCP Connection(248)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1728500334099, current=DOWN, previous=UP] 
+24-10-10 00:28:54.102 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CMS-USER-SERVICE/DESKTOP-ORN7IN0:cms-user-service:8081: registering service... 
+24-10-10 00:28:54.111 [RMI TCP Connection(248)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8081"] 
+24-10-10 00:28:54.115 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_CMS-USER-SERVICE/DESKTOP-ORN7IN0:cms-user-service:8081 - registration status: 204 
+24-10-10 00:28:54.141 [RMI TCP Connection(248)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
+24-10-10 00:28:54.153 [RMI TCP Connection(248)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+24-10-10 00:28:54.161 [RMI TCP Connection(248)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 
+24-10-10 00:28:54.162 [RMI TCP Connection(248)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ... 

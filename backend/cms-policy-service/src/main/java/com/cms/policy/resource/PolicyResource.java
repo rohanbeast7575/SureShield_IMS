@@ -113,7 +113,8 @@ public class PolicyResource {
 		List<Policy> cachedList = redisImplmt.getPolicies("key_policies", Policy.class);
 		PolicyResponseDto response = new PolicyResponseDto();
 
-		if (cachedList == null) {
+		
+		if (cachedList.isEmpty()) {
 
 			List<Policy> policies = this.policyService.getAllByStatus(ActiveStatus.ACTIVE.value());
 
@@ -126,7 +127,7 @@ public class PolicyResource {
 			response.setPolicies(policies);
 			response.setResponseMessage("Policies fetched successful!!!");
 			response.setSuccess(true);
-			redisImplmt.setPolicies("key_policies", policies, 360L);
+			redisImplmt.setPolicies("key_policies", policies, 10);
 			return new ResponseEntity<PolicyResponseDto>(response, HttpStatus.OK);
 
 		} else {

@@ -1,0 +1,131 @@
+version: '3.8'
+
+services:
+  # Eureka Service Registry
+  eureka-server:
+    image: eureka-server:latest
+    build:
+      context: ./eureka
+      dockerfile: Dockerfile
+    container_name: cms-service-registry
+    ports:
+      - "8761:8761"
+    networks:
+      - cms-network
+
+  # API Gateway
+  api-gateway:
+    image: api-gateway:latest
+    build:
+      context: ./api-gateway
+      dockerfile: Dockerfile
+    container_name: cms-api-gateway
+    ports:
+      - "9000:9000"
+    depends_on:
+      - eureka-server
+    networks:
+      - cms-network
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eureka-server:8761/eureka"
+
+  # CMS User Service
+  cms-user-service:
+    image: cms-user-service:latest
+    build:
+      context: ./cms-user-service
+      dockerfile: Dockerfile
+    container_name: cms-user-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - eureka-server
+      - mysql
+    networks:
+      - cms-network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/cms_user_detail?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root123123
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQLDialect
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eureka-server:8761/eureka"
+
+  # CMS Policy Service
+  cms-policy-service:
+    image: cms-policy-service:latest
+    build:
+      context: ./cms-policy-service
+      dockerfile: Dockerfile
+    container_name: cms-policy-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - eureka-server
+      - mysql
+    networks:
+      - cms-network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/cms_policy_detail?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root123123
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQLDialect
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eureka-server:8761/eureka"
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+
+  # CMS Claim Service
+  cms-claim-service:
+    image: cms-claim-service:latest
+    build:
+      context: ./cms-claim-service
+      dockerfile: Dockerfile
+    container_name: cms-claim-service
+    ports:
+      - "8083:8083"
+    depends_on:
+      - eureka-server
+      - mysql
+    networks:
+      - cms-network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/cms_claim_detail?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root123123
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQLDialect
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eureka-server:8761/eureka"
+
+  # MySQL database
+  mysql:
+    image: mysql:8.0
+    container_name: cms-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root123123
+      MYSQL_DATABASE: cms_user_detail
+    ports:
+      - "3306:3306"
+    networks:
+      - cms-network
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  # Redis Service
+  redis:
+    image: redis:alpine
+    container_name: cms-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - cms-network
+
+networks:
+  cms-network:
+    driver: bridge
+
+volumes:
+  mysql-data:
