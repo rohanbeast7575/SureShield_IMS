@@ -41,7 +41,7 @@ eureka:
     redis:
       time-to-live: 60000 # TTL in milliseconds
   redis:
-    host: localhost
+    host: redis
     port: 6379
     password: # leave empty if not set
 

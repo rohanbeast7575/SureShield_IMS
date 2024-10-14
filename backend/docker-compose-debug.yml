@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  cms-user-service:
+    ports:
+      - "5005:5005" # Debugging port for User Service
+    environment:
+      JAVA_OPTS: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005"
+
+  cms-policy-service:
+    ports:
+      - "5006:5006" # Debugging port for Policy Service
+    environment:
+      JAVA_OPTS: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5006"
+
+  cms-claim-service:
+    ports:
+      - "5007:5007" # Debugging port for Claim Service
+    environment:
+      JAVA_OPTS: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5007"

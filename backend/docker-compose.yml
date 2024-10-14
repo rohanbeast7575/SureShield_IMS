@@ -64,6 +64,7 @@ services:
     depends_on:
       - eureka-server
       - mysql
+      - redis
     networks:
       - cms-network
     environment:
